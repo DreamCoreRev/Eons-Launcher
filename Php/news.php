@@ -47,7 +47,7 @@ $versionInfo = [
     'launcher_version' => '1.0.0',
 
     // ⚠️ Le manifest est servi par XAMPP en local
-    'manifest_url'     => 'http://localhost/eons_launcher/manifest.php',
+    'manifest_url'     => 'https://eons-world.eu/eons_launcher/manifest.php',
 
     'website_url'      => 'https://eons-world.eu/',
     'register_url'     => 'https://eons-world.eu/auth.php',

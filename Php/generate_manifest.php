@@ -14,10 +14,10 @@ header('Access-Control-Allow-Origin: *');
 // CONFIGURATION
 // =============================================
 
-define('CLIENT_BASE_PATH', 'C:/Servers/Client/Eons/');
+define('CLIENT_BASE_PATH', 'C:/Servers/WebServers/eons-world.eu/eons_client/');
 
 // ⚠️ URL locale — les fichiers sont servis par XAMPP via l'alias /eons_client/
-define('CLIENT_BASE_URL', 'http://localhost/eons_client/');
+define('CLIENT_BASE_URL', 'https://eons-world.eu/eons_client/');
 
 // =============================================
 // SCAN

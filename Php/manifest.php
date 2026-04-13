@@ -15,11 +15,11 @@ header('Access-Control-Allow-Origin: *');
 // =============================================
 
 // Chemin physique du client sur le serveur local
-define('CLIENT_BASE_PATH', 'C:/Servers/Client/Eons/');
+define('CLIENT_BASE_PATH', 'C:/Servers/WebServers/eons-world.eu/eons_client/');
 
 // ⚠️ URL locale via l'alias Apache — NE PAS mettre eons-world.eu ici
 // Les fichiers sont téléchargés depuis XAMPP, pas depuis le site web
-define('CLIENT_BASE_URL', 'http://localhost/eons_client/');
+define('CLIENT_BASE_URL', 'https://eons-world.eu/eons_client/');
 
 define('CACHE_FILE',     __DIR__ . '/cache/manifest_cache.json');
 define('CACHE_DURATION', 3600); // 1 heure
