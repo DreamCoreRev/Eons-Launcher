@@ -1,11 +1,12 @@
 <?php
 /**
  * Eons Launcher - Manifest avec Cache
- * À placer dans : C:/xampp/htdocs/eons_launcher/manifest.php
- *
- * Les fichiers sont servis depuis XAMPP via l'alias Apache /eons_client/
- * configuré dans httpd-vhosts.conf (déjà en place).
+ * C:/Servers/WebServers/eons-world.eu/eons_launcher/manifest.php
  */
+
+// ⚠️ IMPORTANT : le scan MD5 de 19 Go prend plusieurs minutes
+set_time_limit(600); // 10 minutes max
+ini_set('memory_limit', '512M');
 
 header('Content-Type: application/json; charset=utf-8');
 header('Access-Control-Allow-Origin: *');
@@ -14,18 +15,12 @@ header('Access-Control-Allow-Origin: *');
 // CONFIGURATION
 // =============================================
 
-// Chemin physique du client sur le serveur local
 define('CLIENT_BASE_PATH', 'C:/Servers/WebServers/eons-world.eu/eons_client/');
-
-// ⚠️ URL locale via l'alias Apache — NE PAS mettre eons-world.eu ici
-// Les fichiers sont téléchargés depuis XAMPP, pas depuis le site web
-define('CLIENT_BASE_URL', 'https://eons-world.eu/eons_client/');
+define('CLIENT_BASE_URL',  'https://eons-world.eu/eons_client/');
 
 define('CACHE_FILE',     __DIR__ . '/cache/manifest_cache.json');
-define('CACHE_DURATION', 3600); // 1 heure
+define('CACHE_DURATION', 86400); // 24h — régénération rare vu le volume
 
-// Token pour forcer la régénération du cache :
-// http://localhost/eons_launcher/manifest.php?refresh=1&token=XXX
 define('REFRESH_TOKEN', '62b69a792f5e205dfaf537ba5e8fd1aea28f51e6bab74c5ec8761cf8f400a374');
 
 // =============================================
@@ -54,7 +49,9 @@ function saveCache(string $json): void
 // REFRESH FORCÉ
 // =============================================
 
-$forceRefresh = isset($_GET['refresh']) && isset($_GET['token']) && $_GET['token'] === REFRESH_TOKEN;
+$forceRefresh = isset($_GET['refresh'])
+             && isset($_GET['token'])
+             && hash_equals(REFRESH_TOKEN, $_GET['token']);
 
 if (!$forceRefresh && isCacheValid()) {
     header('X-Cache: HIT');
@@ -79,13 +76,10 @@ function scanClientDirectory(string $basePath, string $baseUrl): array
     foreach ($iterator as $file) {
         if (!$file->isFile()) continue;
 
-        // Normaliser le chemin en slashes
         $absolutePath = str_replace('\\', '/', $file->getPathname());
         $cleanBase    = str_replace('\\', '/', $basePath);
         $relativePath = ltrim(str_replace($cleanBase, '', $absolutePath), '/');
-
-        // Encoder chaque segment du chemin pour l'URL (gère les espaces, accents, etc.)
-        $encodedUrl = $baseUrl . implode('/', array_map('rawurlencode', explode('/', $relativePath)));
+        $encodedUrl   = $baseUrl . implode('/', array_map('rawurlencode', explode('/', $relativePath)));
 
         $files[] = [
             'path'     => $relativePath,
@@ -100,7 +94,7 @@ function scanClientDirectory(string $basePath, string $baseUrl): array
 }
 
 // =============================================
-// GÉNÉRATION DU MANIFEST
+// GÉNÉRATION
 // =============================================
 
 try {
