@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Servers\\Sources\\Eons-Launcher\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|EonsLauncher.csproj|c:\\servers\\sources\\eons-launcher\\eonslauncher.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|EonsLauncher.csproj|solutionrelative:eonslauncher.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|EonsLauncher.csproj|c:\\servers\\sources\\eons-launcher\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|EonsLauncher.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,13 +19,13 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "EonsLauncher",
-              "DocumentMoniker": "C:\\Servers\\Sources\\Eons-Launcher\\EonsLauncher.csproj",
-              "RelativeDocumentMoniker": "EonsLauncher.csproj",
-              "ToolTip": "C:\\Servers\\Sources\\Eons-Launcher\\EonsLauncher.csproj",
-              "RelativeToolTip": "EonsLauncher.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-04-15T01:50:03.495Z",
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Servers\\Sources\\Eons-Launcher\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MainWindow.xaml",
+              "ToolTip": "C:\\Servers\\Sources\\Eons-Launcher\\MainWindow.xaml",
+              "RelativeToolTip": "MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-04-15T15:33:09.682Z",
               "EditorCaption": ""
             }
           ]

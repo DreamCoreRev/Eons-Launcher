@@ -1,5 +1,5 @@
 ﻿EonsLauncher
-1.0.0.0
+
 
 winexe
 C#
@@ -12,9 +12,9 @@ TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR
 C:\Servers\Sources\Eons-Launcher\App.xaml
 11407045341
 1-913308027
-12842835389
+10-630717353
 208132365744
 MainWindow.xaml;
 
-True
+False
 
