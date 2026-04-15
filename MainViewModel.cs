@@ -24,6 +24,10 @@ public class MainViewModel : INotifyPropertyChanged
     private string _progressText = "";
     public  string ProgressText  { get => _progressText; set => SetProp(ref _progressText, value); }
 
+    // Vitesse de téléchargement affichée dans la barre du bas (ex : "3,42 Mo/s")
+    private string _speedText = "";
+    public  string SpeedText  { get => _speedText; set => SetProp(ref _speedText, value); }
+
     private bool _isProgressVisible;
     public  bool IsProgressVisible { get => _isProgressVisible; set => SetProp(ref _isProgressVisible, value); }
 
@@ -71,6 +75,8 @@ public class MainViewModel : INotifyPropertyChanged
             GlobalProgress = pct;
             ProgressText   = $"{cur} / {tot} fichiers  ({pct:F0}%)";
         });
+        // Mise à jour de la vitesse depuis le timer interne du DownloadService
+        _download.OnSpeedChanged += speed => Dispatch(() => SpeedText = speed);
 
         _config.Load();
         ClientPath = _config.Settings.ClientPath;
@@ -115,8 +121,8 @@ public class MainViewModel : INotifyPropertyChanged
 
     public async Task CheckFilesAsync()
     {
-		if (IsDownloading) return;
-		
+        if (IsDownloading) return;
+
         CanPlay    = false;
         CanUpdate  = false;
         StatusText = "Récupération du manifest...";
@@ -173,6 +179,7 @@ public class MainViewModel : INotifyPropertyChanged
         IsProgressVisible = true;
         GlobalProgress    = 0;
         ProgressText      = "Démarrage...";
+        SpeedText         = "";
         _downloadCts      = new CancellationTokenSource();
 
         try
@@ -181,6 +188,7 @@ public class MainViewModel : INotifyPropertyChanged
             StatusText     = "✓ Mise à jour terminée - Prêt à jouer !";
             SubStatusText  = "";
             GlobalProgress = 100;
+            SpeedText      = "";
             CanPlay        = true;
             _filesToDownload?.Clear();
         }
@@ -188,11 +196,13 @@ public class MainViewModel : INotifyPropertyChanged
         {
             StatusText    = "Téléchargement annulé";
             SubStatusText = "";
+            SpeedText     = "";
             CanUpdate     = _filesToDownload?.Count > 0;
         }
         catch (Exception ex)
         {
             StatusText = "Erreur pendant le téléchargement";
+            SpeedText  = "";
             AddLog($"Erreur : {ex.Message}");
         }
         finally

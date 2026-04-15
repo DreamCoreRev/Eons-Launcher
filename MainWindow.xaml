@@ -336,19 +336,52 @@
                             <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
 
+                        <!-- BARRE DE PROGRESSION + VITESSE -->
                         <Grid Grid.Row="0" Margin="0,0,0,10"
                               Visibility="{Binding IsProgressVisible, Converter={StaticResource BoolToVis}}">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition/>
                                 <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
                             </Grid.ColumnDefinitions>
-                            <ProgressBar Style="{StaticResource GoldProgressBar}"
+
+                            <ProgressBar Grid.Column="0"
+                                         Style="{StaticResource GoldProgressBar}"
                                          Value="{Binding GlobalProgress}" Maximum="100"/>
-                            <TextBlock Grid.Column="1" Text="{Binding ProgressText}" FontSize="10"
+
+                            <!-- Nombre de fichiers / pourcentage -->
+                            <TextBlock Grid.Column="1"
+                                       Text="{Binding ProgressText}" FontSize="10"
                                        Foreground="{StaticResource BrushTextMuted}"
                                        VerticalAlignment="Center" Margin="10,0,0,0" FontFamily="Segoe UI"/>
+
+                            <!-- Vitesse de téléchargement (visible uniquement si non vide) -->
+                            <Border Grid.Column="2"
+                                    CornerRadius="3" Padding="6,2" Margin="8,0,0,0"
+                                    Background="#0D1A2A" BorderThickness="1" BorderBrush="{StaticResource BrushBorder}"
+                                    VerticalAlignment="Center">
+                                <Border.Style>
+                                    <Style TargetType="Border">
+                                        <Setter Property="Visibility" Value="Visible"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding SpeedText}" Value="">
+                                                <Setter Property="Visibility" Value="Collapsed"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Border.Style>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="⬇ " FontSize="9"
+                                               Foreground="{StaticResource BrushGold}"
+                                               VerticalAlignment="Center"/>
+                                    <TextBlock Text="{Binding SpeedText}" FontSize="10" FontWeight="Bold"
+                                               Foreground="{StaticResource BrushGoldLight}"
+                                               VerticalAlignment="Center" FontFamily="Consolas"/>
+                                </StackPanel>
+                            </Border>
                         </Grid>
 
+                        <!-- STATUT + BOUTONS -->
                         <Grid Grid.Row="1">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition/>

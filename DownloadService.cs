@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using System.IO;
 using System.Net.Http;
 using System.Security.Cryptography;
@@ -10,10 +11,15 @@ public class DownloadService : IDisposable
     private bool _disposed;
     private CancellationTokenSource? _cts;
 
+    // Compteur global d'octets reçus (mis à jour depuis plusieurs threads)
+    private long _totalBytesDownloaded;
+
     public event Action<string>?           OnStatusChanged;
     public event Action<int, int, double>? OnProgressChanged;
     public event Action<string, bool>?     OnFileCompleted;
     public event Action<string>?           OnError;
+    // Publie la vitesse formatée toutes les secondes ("1,23 Mo/s", "512 Ko/s", etc.)
+    public event Action<string>?           OnSpeedChanged;
 
     public DownloadService()
     {
@@ -55,10 +61,26 @@ public class DownloadService : IDisposable
         _cts = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken);
         var token = _cts.Token;
 
+        _totalBytesDownloaded = 0;
+
         int completed = 0;
         int total     = files.Count;
 
         using var sem = new SemaphoreSlim(LauncherConfig.MaxConcurrentDownloads);
+
+        // Timer de vitesse : calcule le delta d'octets toutes les secondes
+        long lastBytes = 0;
+        using var speedTimer = new PeriodicTimer(TimeSpan.FromSeconds(1));
+        var speedTask = Task.Run(async () =>
+        {
+            while (await speedTimer.WaitForNextTickAsync(token).ConfigureAwait(false))
+            {
+                long current = Interlocked.Read(ref _totalBytesDownloaded);
+                long delta   = current - lastBytes;
+                lastBytes    = current;
+                OnSpeedChanged?.Invoke(FormatSpeed(delta));
+            }
+        }, token);
 
         var tasks = files.Select(async file =>
         {
@@ -66,14 +88,19 @@ public class DownloadService : IDisposable
             try
             {
                 await DownloadSingleFileAsync(file, clientPath, token);
-                int cur = Interlocked.Increment(ref completed);
-				double pct = cur * 100.0 / total;
-				OnProgressChanged?.Invoke(cur, total, pct);
+                int    cur = Interlocked.Increment(ref completed);
+                double pct = cur * 100.0 / total;
+                OnProgressChanged?.Invoke(cur, total, pct);
             }
             finally { sem.Release(); }
         });
 
         await Task.WhenAll(tasks);
+
+        // Arrêt propre du timer de vitesse
+        _cts.Cancel();
+        try { await speedTask; } catch (OperationCanceledException) { }
+        OnSpeedChanged?.Invoke("");
     }
 
     private async Task DownloadSingleFileAsync(ClientFile file, string clientPath, CancellationToken token)
@@ -100,7 +127,11 @@ public class DownloadService : IDisposable
                 var buffer = new byte[LauncherConfig.DownloadBufferSize];
                 int bytesRead;
                 while ((bytesRead = await contentStream.ReadAsync(buffer, token)) > 0)
+                {
                     await fileStream.WriteAsync(buffer.AsMemory(0, bytesRead), token);
+                    // Accumule les octets pour le calcul de vitesse
+                    Interlocked.Add(ref _totalBytesDownloaded, bytesRead);
+                }
 
                 await fileStream.FlushAsync(token);
                 fileStream.Close();
@@ -135,6 +166,15 @@ public class DownloadService : IDisposable
                     await Task.Delay(1000 * attempt, token);
             }
         }
+    }
+
+    /// <summary>Formate un débit en octets/s → Ko/s, Mo/s ou Go/s.</summary>
+    private static string FormatSpeed(long bytesPerSec)
+    {
+        if (bytesPerSec <= 0)                     return "0 Ko/s";
+        if (bytesPerSec < 1024L * 1024)           return $"{bytesPerSec / 1024.0:F0} Ko/s";
+        if (bytesPerSec < 1024L * 1024 * 1024)    return $"{bytesPerSec / (1024.0 * 1024):F2} Mo/s";
+        return $"{bytesPerSec / (1024.0 * 1024 * 1024):F2} Go/s";
     }
 
     public void Cancel() => _cts?.Cancel();
