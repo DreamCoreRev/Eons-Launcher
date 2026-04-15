@@ -66,8 +66,9 @@ public class DownloadService : IDisposable
             try
             {
                 await DownloadSingleFileAsync(file, clientPath, token);
-                var pct = Interlocked.Increment(ref completed) * 100.0 / total;
-                OnProgressChanged?.Invoke(completed, total, pct);
+                int cur = Interlocked.Increment(ref completed);
+				double pct = cur * 100.0 / total;
+				OnProgressChanged?.Invoke(cur, total, pct);
             }
             finally { sem.Release(); }
         });

@@ -138,28 +138,32 @@
         </Style>
 
         <!-- PROGRESSBAR DORÉE -->
-        <Style x:Key="GoldProgressBar" TargetType="ProgressBar">
-            <Setter Property="Height" Value="6"/>
-            <Setter Property="Background" Value="#1A2030"/>
-            <Setter Property="BorderThickness" Value="0"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="ProgressBar">
-                        <Border Background="{TemplateBinding Background}" CornerRadius="3">
-                            <Border x:Name="PART_Indicator" HorizontalAlignment="Left" CornerRadius="3">
-                                <Border.Background>
-                                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                                        <GradientStop Color="#8B6914" Offset="0"/>
-                                        <GradientStop Color="#C8A84B" Offset="0.5"/>
-                                        <GradientStop Color="#E8C86A" Offset="1"/>
-                                    </LinearGradientBrush>
-                                </Border.Background>
-                            </Border>
-                        </Border>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
+<Style x:Key="GoldProgressBar" TargetType="ProgressBar">
+    <Setter Property="Height" Value="6"/>
+    <Setter Property="Background" Value="#1A2030"/>
+    <Setter Property="BorderThickness" Value="0"/>
+    <Setter Property="Minimum" Value="0"/>
+    <Setter Property="Maximum" Value="100"/>
+    <Setter Property="Template">
+        <Setter.Value>
+            <ControlTemplate TargetType="ProgressBar">
+                <Grid x:Name="TemplateRoot">
+                    <Border Background="{TemplateBinding Background}" CornerRadius="3"/>
+                    <Border x:Name="PART_Track" CornerRadius="3" Background="Transparent"/>
+                    <Rectangle x:Name="PART_Indicator" HorizontalAlignment="Left" RadiusX="3" RadiusY="3">
+                        <Rectangle.Fill>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                <GradientStop Color="#8B6914" Offset="0"/>
+                                <GradientStop Color="#C8A84B" Offset="0.5"/>
+                                <GradientStop Color="#E8C86A" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                </Grid>
+            </ControlTemplate>
+        </Setter.Value>
+    </Setter>
+</Style>
 
     </Application.Resources>
 </Application>

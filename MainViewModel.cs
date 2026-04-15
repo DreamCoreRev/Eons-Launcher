@@ -115,6 +115,8 @@ public class MainViewModel : INotifyPropertyChanged
 
     public async Task CheckFilesAsync()
     {
+		if (IsDownloading) return;
+		
         CanPlay    = false;
         CanUpdate  = false;
         StatusText = "Récupération du manifest...";
