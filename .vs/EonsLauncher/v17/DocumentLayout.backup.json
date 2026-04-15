@@ -1,0 +1,36 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Servers\\Sources\\Eons-Launcher\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|EonsLauncher.csproj|c:\\servers\\sources\\eons-launcher\\eonslauncher.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|EonsLauncher.csproj|solutionrelative:eonslauncher.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EonsLauncher",
+              "DocumentMoniker": "C:\\Servers\\Sources\\Eons-Launcher\\EonsLauncher.csproj",
+              "RelativeDocumentMoniker": "EonsLauncher.csproj",
+              "ToolTip": "C:\\Servers\\Sources\\Eons-Launcher\\EonsLauncher.csproj",
+              "RelativeToolTip": "EonsLauncher.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-04-15T00:50:56.036Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

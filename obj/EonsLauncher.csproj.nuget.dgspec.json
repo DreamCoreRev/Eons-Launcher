@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Aurora\\Desktop\\EonsLauncher\\EonsLauncher.csproj": {}
+    "C:\\Servers\\Sources\\Eons-Launcher\\EonsLauncher.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Aurora\\Desktop\\EonsLauncher\\EonsLauncher.csproj": {
+    "C:\\Servers\\Sources\\Eons-Launcher\\EonsLauncher.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Aurora\\Desktop\\EonsLauncher\\EonsLauncher.csproj",
+        "projectUniqueName": "C:\\Servers\\Sources\\Eons-Launcher\\EonsLauncher.csproj",
         "projectName": "EonsLauncher",
-        "projectPath": "C:\\Users\\Aurora\\Desktop\\EonsLauncher\\EonsLauncher.csproj",
+        "projectPath": "C:\\Servers\\Sources\\Eons-Launcher\\EonsLauncher.csproj",
         "packagesPath": "C:\\Users\\Aurora\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Aurora\\Desktop\\EonsLauncher\\obj\\",
+        "outputPath": "C:\\Servers\\Sources\\Eons-Launcher\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Aurora\\AppData\\Roaming\\NuGet\\NuGet.Config",
