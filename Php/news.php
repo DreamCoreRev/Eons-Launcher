@@ -28,14 +28,14 @@ $news = [
         'type'    => 'update',
         'image'   => null,
     ],
-    [
-        'id'      => 3,
-        'title'   => 'Événement de Printemps',
-        'content' => 'Profitez de bonus d\'expérience x2 ce weekend ! Connectez-vous entre le 12 et le 14 avril pour en profiter.',
-        'date'    => '2026-04-10',
-        'type'    => 'event',
-        'image'   => null,
-    ],
+    //[
+    //    'id'      => 3,
+    //    'title'   => 'Événement de Printemps',
+    //    'content' => 'Profitez de bonus d\'expérience x2 ce weekend ! Connectez-vous entre le 12 et le 14 avril pour en profiter.',
+    //    'date'    => '2026-04-10',
+    //    'type'    => 'event',
+    //    'image'   => null,
+    //],
 ];
 
 // =============================================
@@ -85,8 +85,8 @@ function getOnlinePlayers(): int
             'root',
             [PDO::ATTR_TIMEOUT => 2, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
         );
-        $stmt = $pdo->query("SELECT * FROM characters WHERE online = 1");
-        return (int) $stmt->fetchColumn();
+        $stmt = $pdo->query("SELECT COUNT(*) FROM characters WHERE online = 1");
+		return (int) $stmt->fetchColumn();
     } catch (Exception $e) {
         return 0;
     }
