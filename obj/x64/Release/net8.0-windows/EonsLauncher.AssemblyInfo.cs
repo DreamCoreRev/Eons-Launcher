@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EonsLauncher")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bafc8b675278bd004d1d54bb555b89448169dba3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1ee8851da49d7e82d918678b1dfe7878cb2c9891")]
 [assembly: System.Reflection.AssemblyProductAttribute("EonsLauncher")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EonsLauncher")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
