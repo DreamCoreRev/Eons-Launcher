@@ -1,6 +1,6 @@
-http://localhost/eons_launcher/manifest.php?refresh=1&token=62b69a792f5e205dfaf537ba5e8fd1aea28f51e6bab74c5ec8761cf8f400a374
+(OLD Request) http://localhost/eons_launcher/manifest.php?refresh=1&token=62b69a792f5e205dfaf537ba5e8fd1aea28f51e6bab74c5ec8761cf8f400a374
 
-CMD Executer en tant qu'Admin
+Exécuter l'invite de commandes en tant qu'administrateur
 
 cd C:\Servers\WebServers\eons-world.eu\eons_launcher
 

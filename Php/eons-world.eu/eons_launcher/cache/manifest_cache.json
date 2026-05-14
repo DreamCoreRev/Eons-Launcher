@@ -1,10 +1,10 @@
 {
     "success": true,
     "version": "3.3.5a",
-    "generated_at": "2026-04-15 04:31:38",
-    "total_files": 206,
-    "total_size": 20557159244,
-    "total_size_mb": 19604.83,
+    "generated_at": "2026-05-14 23:58:22",
+    "total_files": 227,
+    "total_size": 25767041778,
+    "total_size_mb": 24573.37,
     "base_url": "https://eons-world.eu/eons_client/",
     "files": [
         {
@@ -1053,58 +1053,72 @@
         {
             "path": "Data/frFR/patch-frFR-5.MPQ",
             "url": "https://eons-world.eu/eons_client/Data/frFR/patch-frFR-5.MPQ",
-            "size": 369924747,
-            "md5": "b69a273db928ce7aaa29ab562c97b7e8",
-            "modified": 1776057305
+            "size": 370014981,
+            "md5": "ddd3a9cb89d60fce7f9a52f514ad04ad",
+            "modified": 1776820075
         },
         {
             "path": "Data/frFR/patch-frFR-6.MPQ",
             "url": "https://eons-world.eu/eons_client/Data/frFR/patch-frFR-6.MPQ",
-            "size": 94675,
-            "md5": "25593238f916c58e9b633cb54f4f96e8",
-            "modified": 1745929082
+            "size": 14181,
+            "md5": "038fc2e716e8c46c4db944e67813b70b",
+            "modified": 1776373773
         },
         {
             "path": "Data/frFR/patch-frFR-7.MPQ",
             "url": "https://eons-world.eu/eons_client/Data/frFR/patch-frFR-7.MPQ",
-            "size": 584629,
-            "md5": "e9ce553f7c0cdb571d0516e5430fbc4d",
-            "modified": 1776057210
+            "size": 519328,
+            "md5": "1d143382ef2d5b5cceabf1e4f54be53d",
+            "modified": 1776373801
         },
         {
             "path": "Data/frFR/patch-frFR-8.MPQ",
             "url": "https://eons-world.eu/eons_client/Data/frFR/patch-frFR-8.MPQ",
-            "size": 342290,
-            "md5": "0ed6dca37ef820d615d62e5ece652505",
-            "modified": 1776054862
+            "size": 258775,
+            "md5": "2f9738adad922f32de60964c68384d6a",
+            "modified": 1776373828
         },
         {
             "path": "Data/frFR/patch-frFR-9.MPQ",
             "url": "https://eons-world.eu/eons_client/Data/frFR/patch-frFR-9.MPQ",
-            "size": 279707,
-            "md5": "c85f1957f0267574f672f27f2a627c54",
-            "modified": 1761507040
+            "size": 413270,
+            "md5": "7a492ab67110495ce0c5cbbb905d3150",
+            "modified": 1776912184
         },
         {
             "path": "Data/frFR/patch-frFR-A.MPQ",
             "url": "https://eons-world.eu/eons_client/Data/frFR/patch-frFR-A.MPQ",
-            "size": 21035568,
-            "md5": "5ad39d24b653b07d05b63c15b4660ed3",
-            "modified": 1776136528
+            "size": 59327061,
+            "md5": "c5cb6c381ebab2b275fb9c5d0576fe60",
+            "modified": 1778435083
+        },
+        {
+            "path": "Data/frFR/patch-frFR-B.MPQ",
+            "url": "https://eons-world.eu/eons_client/Data/frFR/patch-frFR-B.MPQ",
+            "size": 345011,
+            "md5": "40a527078c4b52ad1b8c3627e8d0f54a",
+            "modified": 1776754915
+        },
+        {
+            "path": "Data/frFR/patch-frFR-P.MPQ",
+            "url": "https://eons-world.eu/eons_client/Data/frFR/patch-frFR-P.MPQ",
+            "size": 5773107,
+            "md5": "66647a0d2a25af1a355afea7946ea5fa",
+            "modified": 1776788130
         },
         {
             "path": "Data/frFR/patch-frFR-X.MPQ",
             "url": "https://eons-world.eu/eons_client/Data/frFR/patch-frFR-X.MPQ",
-            "size": 48674,
-            "md5": "89b6303942293801c36c1bda2fec9414",
-            "modified": 1775926496
+            "size": 8528,
+            "md5": "8a98c8cd89dc8b6fb405bb0a180d4ee0",
+            "modified": 1776373951
         },
         {
             "path": "Data/frFR/patch-frFR-Z.MPQ",
             "url": "https://eons-world.eu/eons_client/Data/frFR/patch-frFR-Z.MPQ",
-            "size": 8373,
-            "md5": "da8119e336f0db39776c129013922c3a",
-            "modified": 1776220007
+            "size": 8501,
+            "md5": "90bfe56fe34a5e152091b698f330f684",
+            "modified": 1776373972
         },
         {
             "path": "Data/frFR/patch-frFR.MPQ",
@@ -1186,9 +1200,9 @@
         {
             "path": "Data/patch-5.MPQ",
             "url": "https://eons-world.eu/eons_client/Data/patch-5.MPQ",
-            "size": 109760055,
-            "md5": "71b02c061b16d1778bd56a584f5b6fb2",
-            "modified": 1776130421
+            "size": 109833706,
+            "md5": "c606feddf32d53e8ac8d3ea0bd2553fb",
+            "modified": 1776720583
         },
         {
             "path": "Data/patch-6.MPQ",
@@ -1214,9 +1228,86 @@
         {
             "path": "Data/patch-9.MPQ",
             "url": "https://eons-world.eu/eons_client/Data/patch-9.MPQ",
-            "size": 281220410,
-            "md5": "fb0b0b8951d7f9a43771d27ef72104af",
-            "modified": 1775920259
+            "size": 280995686,
+            "md5": "152eaf595170f0a4ce4ebc3753975d96",
+            "modified": 1776384977
+        },
+        {
+            "path": "Data/patch-A.MPQ",
+            "url": "https://eons-world.eu/eons_client/Data/patch-A.MPQ",
+            "size": 177813,
+            "md5": "f570c074c42a982b4256dfb9f7c8044a",
+            "modified": 1776721072
+        },
+        {
+            "path": "Data/patch-B.MPQ",
+            "url": "https://eons-world.eu/eons_client/Data/patch-B.MPQ",
+            "size": 17192473,
+            "md5": "ba6c6ba2b81ccfae4542fb138d92d506",
+            "modified": 1719960874
+        },
+        {
+            "path": "Data/patch-C.MPQ",
+            "url": "https://eons-world.eu/eons_client/Data/patch-C.MPQ",
+            "size": 324366017,
+            "md5": "522d5cdcd203f5ff30ba592da9855db6",
+            "modified": 1778538115
+        },
+        {
+            "path": "Data/patch-D.MPQ",
+            "url": "https://eons-world.eu/eons_client/Data/patch-D.MPQ",
+            "size": 1021472822,
+            "md5": "c34a3c03d3bcebe7ce584407933d203d",
+            "modified": 1778277244
+        },
+        {
+            "path": "Data/patch-E.MPQ",
+            "url": "https://eons-world.eu/eons_client/Data/patch-E.MPQ",
+            "size": 481219834,
+            "md5": "ccedc110d1737f6d5507c5553a903fc2",
+            "modified": 1778430078
+        },
+        {
+            "path": "Data/patch-F.MPQ",
+            "url": "https://eons-world.eu/eons_client/Data/patch-F.MPQ",
+            "size": 552818281,
+            "md5": "60887f67912a860db6e5235b042e1ba3",
+            "modified": 1778549969
+        },
+        {
+            "path": "Data/patch-G.MPQ",
+            "url": "https://eons-world.eu/eons_client/Data/patch-G.MPQ",
+            "size": 651216,
+            "md5": "a9e887eb757750845147ec19ff726ec3",
+            "modified": 1778467908
+        },
+        {
+            "path": "Data/patch-H.MPQ",
+            "url": "https://eons-world.eu/eons_client/Data/patch-H.MPQ",
+            "size": 1325642116,
+            "md5": "ece5e78e33b001f1421657a65d0927be",
+            "modified": 1738003310
+        },
+        {
+            "path": "Data/patch-S.MPQ",
+            "url": "https://eons-world.eu/eons_client/Data/patch-S.MPQ",
+            "size": 165,
+            "md5": "51c4db367927d620cb8df5b2a9647169",
+            "modified": 1778553720
+        },
+        {
+            "path": "Data/patch-W.MPQ",
+            "url": "https://eons-world.eu/eons_client/Data/patch-W.MPQ",
+            "size": 866570662,
+            "md5": "39cc4b401d370bc9be6b4ccf399e85b4",
+            "modified": 1778641010
+        },
+        {
+            "path": "Data/patch-Z.MPQ",
+            "url": "https://eons-world.eu/eons_client/Data/patch-Z.MPQ",
+            "size": 571021296,
+            "md5": "ad735ae66bf1354cbf8e53e5af1f93f0",
+            "modified": 1778792584
         },
         {
             "path": "Data/patch.MPQ",
@@ -1240,11 +1331,18 @@
             "modified": 1250789739
         },
         {
+            "path": "Eons.dll",
+            "url": "https://eons-world.eu/eons_client/Eons.dll",
+            "size": 176640,
+            "md5": "20006cf9e525cf2d96701b005c4314e9",
+            "modified": 1668631558
+        },
+        {
             "path": "Eons.exe",
             "url": "https://eons-world.eu/eons_client/Eons.exe",
             "size": 7880192,
-            "md5": "019b413903944a5b7e3f6d088df93149",
-            "modified": 1749388714
+            "md5": "2911ea412743bfc1d77571cc0f62e9e6",
+            "modified": 1778299677
         },
         {
             "path": "EonsError.exe",
@@ -1422,11 +1520,60 @@
             "modified": 1317661109
         },
         {
+            "path": "msvcm90.dll",
+            "url": "https://eons-world.eu/eons_client/msvcm90.dll",
+            "size": 225280,
+            "md5": "7b37f8ec25c9ad853e8126c1d0992201",
+            "modified": 1648958290
+        },
+        {
+            "path": "msvcm90d.dll",
+            "url": "https://eons-world.eu/eons_client/msvcm90d.dll",
+            "size": 311808,
+            "md5": "304e253ead11f4949d007626cd12ccff",
+            "modified": 1648958290
+        },
+        {
+            "path": "msvcp90.dll",
+            "url": "https://eons-world.eu/eons_client/msvcp90.dll",
+            "size": 572928,
+            "md5": "871f979d70414c900b35e56222932daf",
+            "modified": 1648958290
+        },
+        {
+            "path": "msvcp90d.dll",
+            "url": "https://eons-world.eu/eons_client/msvcp90d.dll",
+            "size": 868864,
+            "md5": "18b44bf59519fee69cfd8c44509d70f3",
+            "modified": 1648958290
+        },
+        {
+            "path": "msvcr71.dll",
+            "url": "https://eons-world.eu/eons_client/msvcr71.dll",
+            "size": 544768,
+            "md5": "40d72771ded1a9b92110a20e65cd15e9",
+            "modified": 1648958290
+        },
+        {
             "path": "msvcr80.dll",
             "url": "https://eons-world.eu/eons_client/msvcr80.dll",
             "size": 632656,
             "md5": "1169436ee42f860c7db37a4692b38f0e",
             "modified": 1282132810
+        },
+        {
+            "path": "msvcr90.dll",
+            "url": "https://eons-world.eu/eons_client/msvcr90.dll",
+            "size": 655872,
+            "md5": "4d03ca609e68f4c90cf66515218017f8",
+            "modified": 1648958290
+        },
+        {
+            "path": "msvcr90d.dll",
+            "url": "https://eons-world.eu/eons_client/msvcr90d.dll",
+            "size": 1180672,
+            "md5": "384645ffb00ce27cf1d1efcad94faf84",
+            "modified": 1648958290
         },
         {
             "path": "Repair.exe",
