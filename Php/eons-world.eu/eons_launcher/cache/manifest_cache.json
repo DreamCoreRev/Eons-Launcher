@@ -1,10 +1,10 @@
 {
     "success": true,
     "version": "3.3.5a",
-    "generated_at": "2026-05-20 02:36:09",
+    "generated_at": "2026-05-21 13:49:59",
     "total_files": 230,
-    "total_size": 25815634130,
-    "total_size_mb": 24619.71,
+    "total_size": 25817445217,
+    "total_size_mb": 24621.43,
     "base_url": "https://eons-world.eu/eons_client/",
     "files": [
         {
@@ -1081,9 +1081,9 @@
         {
             "path": "Data/frFR/patch-frFR-9.MPQ",
             "url": "https://eons-world.eu/eons_client/Data/frFR/patch-frFR-9.MPQ",
-            "size": 413270,
-            "md5": "7a492ab67110495ce0c5cbbb905d3150",
-            "modified": 1776912184
+            "size": 165,
+            "md5": "51c4db367927d620cb8df5b2a9647169",
+            "modified": 1778553720
         },
         {
             "path": "Data/frFR/patch-frFR-A.MPQ",
@@ -1319,16 +1319,16 @@
         {
             "path": "Data/patch-Y.MPQ",
             "url": "https://eons-world.eu/eons_client/Data/patch-Y.MPQ",
-            "size": 46168009,
-            "md5": "5a528dc10d6818f6c4321abd13aa1a61",
-            "modified": 1779225915
+            "size": 46531028,
+            "md5": "759990a5761f4a0c51f5f3d7c8d57491",
+            "modified": 1779363984
         },
         {
             "path": "Data/patch-Z.MPQ",
             "url": "https://eons-world.eu/eons_client/Data/patch-Z.MPQ",
-            "size": 573351458,
-            "md5": "2c8029c7d149da1f4c8561dba84d4ede",
-            "modified": 1779237026
+            "size": 575212631,
+            "md5": "e12139c8c8c26e0224e8092e7cdf1b4a",
+            "modified": 1779245945
         },
         {
             "path": "Data/patch.MPQ",
