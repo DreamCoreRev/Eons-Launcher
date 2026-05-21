@@ -1,10 +1,10 @@
 {
     "success": true,
     "version": "3.3.5a",
-    "generated_at": "2026-05-21 13:49:59",
+    "generated_at": "2026-05-21 16:33:47",
     "total_files": 230,
-    "total_size": 25817445217,
-    "total_size_mb": 24621.43,
+    "total_size": 25827950823,
+    "total_size_mb": 24631.45,
     "base_url": "https://eons-world.eu/eons_client/",
     "files": [
         {
@@ -1326,9 +1326,9 @@
         {
             "path": "Data/patch-Z.MPQ",
             "url": "https://eons-world.eu/eons_client/Data/patch-Z.MPQ",
-            "size": 575212631,
-            "md5": "e12139c8c8c26e0224e8092e7cdf1b4a",
-            "modified": 1779245945
+            "size": 585718237,
+            "md5": "31cfe0abeec715e5a7d5732ef9b26837",
+            "modified": 1779373688
         },
         {
             "path": "Data/patch.MPQ",
